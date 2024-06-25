@@ -26,18 +26,19 @@ function createGrid(size) {
 createGrid(gridSize);
 
 const gridCell = document.querySelector(".gridCell")
-//let bgColor = window.getComputedStyle(gridCell).backgroundColor;
-//let rgbaValues = bgColor.match(/rgba?\((\d+), (\d+), (\d+),? ?([\d\.]+)?\)/);
-//let r = parseInt(rgbaValues[1]);
-//let g = parseInt(rgbaValues[2]);
-//let b = parseInt(rgbaValues[3]);
-//let a = parseFloat(rgbaValues[4]);
+
+function randomInteger(max) {
+    return Math.floor(Math.random()*(max + 1));
+}
 
 function mouseOver(event) {
     if(selectMode.options[selectMode.selectedIndex].value == "normal"){
         event.target.style.backgroundColor = "black";
     } else if(selectMode.options[selectMode.selectedIndex].value == "rgb"){
-        event.target.style.backgroundColor = "blue";
+        let r = randomInteger(255);
+        let g = randomInteger(255);
+        let b = randomInteger(255);
+        event.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     } else if(selectMode.options[selectMode.selectedIndex].value == "opacity"){
         let bgColor = window.getComputedStyle(event.target).backgroundColor;
         let rgbaValues = bgColor.match(/rgba?\((\d+), (\d+), (\d+),? ?([\d\.]+)?\)/);
