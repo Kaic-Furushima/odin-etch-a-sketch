@@ -16,6 +16,7 @@ function createGrid(size) {
             cell.classList.add("gridCell");
             gridContainerRow.appendChild(cell);
             cell.addEventListener("mouseover", mouseOver);
+            cell.addEventListener("click", clearCell);
         }
 
         gridContainer.appendChild(gridContainerRow);
@@ -51,6 +52,10 @@ function mouseOver(event) {
         }
         event.target.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
     }
+}
+
+function clearCell(event){
+    event.target.style.backgroundColor = "white";
 }
 
 gridSizeSelector.addEventListener("click", () => {
