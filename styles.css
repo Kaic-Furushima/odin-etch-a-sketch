@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.gridCell {
+    border: 0.1px solid lightgray;
+    flex: auto;
+}
+
+.gridRow {
+    display: flex;
+    flex: auto;
+}
+
+#gridContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+}
+
+#gridSizeSelector {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
