@@ -1,4 +1,4 @@
-# Etch a Sketch 
+# Etch-a-Sketch 
 
 ## 💻 Tecnologias utilizadas no projeto
 
