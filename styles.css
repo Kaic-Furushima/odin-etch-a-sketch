@@ -6,6 +6,7 @@
 .gridCell {
     border: 0.1px solid lightgray;
     flex: auto;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .gridRow {
@@ -21,7 +22,7 @@
     height: 1000px;
 }
 
-#gridSizeSelector {
+#gridSizeSelector, #gridModeSelector {
     display: block;
     margin: auto;
     margin-top: 20px;

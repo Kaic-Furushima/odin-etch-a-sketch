@@ -1,5 +1,6 @@
 function mouseOver(event) {
-    event.target.style.backgroundColor = 'black';
+    console.log(gridCell.getAttribute("background"));
+    gridCell.setAttribute("background", "255, 255, 255, 0.1")
 }
 
 function createGrid(size) {
@@ -21,9 +22,11 @@ function createGrid(size) {
 }
 
 const gridContainer = document.querySelector("#gridContainer");
-const gridSizeSelector = document.querySelector("#gridSizeSelector")
+const gridSizeSelector = document.querySelector("#gridSizeSelector");
 
 createGrid(16);
+
+const gridCell = document.querySelector(".gridCell")
 
 gridSizeSelector.addEventListener('click', () => {
     let input = prompt('Enter grid size: ');
