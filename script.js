@@ -40,6 +40,9 @@ function mouseOver(event) {
         let b = randomInteger(255);
         event.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     } else if(selectMode.options[selectMode.selectedIndex].value == "opacity"){
+        if(window.getComputedStyle(event.target).backgroundColor == `rgb(255, 255, 255)`){
+            event.target.style.backgroundColor = `rgba(0, 0, 0, 0)`;
+        }
         let bgColor = window.getComputedStyle(event.target).backgroundColor;
         let rgbaValues = bgColor.match(/rgba?\((\d+), (\d+), (\d+),? ?([\d\.]+)?\)/);
         let r = parseInt(rgbaValues[1]);
